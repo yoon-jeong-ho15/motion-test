@@ -1,93 +1,91 @@
 export type Data = {
-  id: number;
-  blog?: { id: number; title: string }[];
+  title: string;
+  blog?: { title: string }[];
   children?: Data[];
 };
 
 export const data: Data[] = [
   {
-    id: 1,
-    blog: [
-      { id: 101, title: "Blog Post 1-1" },
-      { id: 102, title: "Blog Post 1-2" },
-    ],
+    title: "공부",
+    blog: [{ title: "Blog Post 1-1" }, { title: "Blog Post 1-2" }],
     children: [
       {
-        id: 11,
-        blog: [{ id: 111, title: "Child 1-1 Blog" }],
+        title: "알고리즘",
+        blog: [{ title: "Child 1-1 Blog" }],
         children: [
           {
-            id: 111,
-            blog: [{ id: 1111, title: "Grandchild 1-1-1 Blog" }],
+            title: "자료구조",
+            blog: [{ title: "Grandchild 1-1-1 Blog" }],
           },
         ],
       },
       {
-        id: 12,
+        title: "CS",
+        children: [{ title: "intro to TCS" }],
       },
     ],
   },
   {
-    id: 2,
+    title: "일기",
     children: [
       {
-        id: 21,
-        blog: [
-          { id: 211, title: "Child 2-1 Blog" },
-          { id: 212, title: "Child 2-2 Blog" },
-        ],
+        title: "2025년",
+        blog: [{ title: "Child 2-1 Blog" }, { title: "Child 2-2 Blog" }],
+      },
+      { title: "2024년" },
+    ],
+  },
+  {
+    title: "리뷰",
+    blog: [{ title: "Blog Post 3-1" }],
+    children: [
+      {
+        title: "영화",
+        blog: [{ title: "영화1" }, { title: "영화2" }, { title: "영화3" }],
+      },
+      {
+        title: "책",
+        blog: [{ title: "책1" }, { title: "책2" }, { title: "책3" }],
       },
     ],
   },
   {
-    id: 3,
-    blog: [{ id: 301, title: "Blog Post 3-1" }],
-  },
-  {
-    id: 4,
-  },
-  {
-    id: 5,
-    blog: [
-      { id: 501, title: "Blog Post 5-1" },
-      { id: 502, title: "Blog Post 5-2" },
-      { id: 503, title: "Blog Post 5-3" },
-    ],
-  },
-  {
-    id: 6,
+    title: "여행",
     children: [
       {
-        id: 61,
-        blog: [{ id: 611, title: "Child 6-1 Blog" }],
+        title: "국내여행",
+        blog: [{ title: "Child 6-1 Blog" }],
         children: [
           {
-            id: 611,
-            blog: [{ id: 6111, title: "Grandchild 6-1-1 Blog" }],
+            title: "제주도",
+            blog: [{ title: "Grandchild 6-1-1 Blog" }],
             children: [
               {
-                id: 61111,
-                blog: [{ id: 611111, title: "Great-grandchild 6-1-1-1 Blog" }]
-              }
-            ]
+                title: "맛집",
+                blog: [{ title: "Great-grandchild 6-1-1-1 Blog" }],
+              },
+            ],
           },
           {
-            id: 612,
-            blog: [{ id: 6121, title: "Grandchild 6-1-2 Blog" }]
-          }
+            title: "강원도",
+            blog: [{ title: "Grandchild 6-1-2 Blog" }],
+          },
         ],
       },
       {
-        id: 62,
-        blog: [{ id: 621, title: "Child 6-2 Blog" }]
+        title: "해외여행",
+        blog: [{ title: "Child 6-2 Blog" }],
       },
     ],
   },
   {
-    id: 7,
-  },
-  {
-    id: 8,
-    blog: [{ id: 801, title: "Blog Post 8-1" }],
+    title: "개발",
+    blog: [{ title: "Blog Post 8-1" }],
+    children: [
+      {
+        title: "프로젝트 기록",
+        children: [{ title: "yoon-pf" }, { title: "motion-test" }],
+      },
+    ],
   },
 ];

@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import CategoryItem from "./category-item";
-import { data } from "./data";
+import CategoryItem from "./bubble-item";
+import { data } from "../data";
 
 export default function CategoryView() {
   const mainContainerRef = useRef<HTMLDivElement | null>(null);
@@ -13,7 +13,12 @@ export default function CategoryView() {
       ref={mainContainerRef}
     >
       {data.map((item) => (
-        <CategoryItem item={item} mainRef={mainContainerRef} level={1} />
+        <CategoryItem
+          key={item.title}
+          item={item}
+          parentRef={mainContainerRef}
+          level={1}
+        />
       ))}
     </div>
   );
